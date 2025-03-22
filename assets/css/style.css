@@ -1,0 +1,706 @@
+/* Estilos Gerais */
+:root {
+  --primary-color: #e63946;
+  --secondary-color: #1d3557;
+  --accent-color: #457b9d;
+  --light-color: #f1faee;
+  --dark-color: #1d3557;
+  --gray-color: #6c757d;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+.btn {
+  transition: var(--transition);
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #d32836;
+  border-color: #d32836;
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+}
+
+.section-title.text-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Navbar */
+.navbar {
+  padding: 15px 0;
+  transition: var(--transition);
+  background-color: var(--secondary-color) !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand i {
+  color: var(--primary-color);
+  margin-right: 10px;
+  font-size: 2rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: var(--transition);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link i {
+  margin-right: 5px;
+  color: var(--primary-color);
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  width: 24px;
+  height: 24px;
+  background-image: none !important;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+  left: 0;
+  transition: var(--transition);
+}
+
+.navbar-toggler-icon::before {
+  top: 8px;
+}
+
+.navbar-toggler-icon::after {
+  bottom: 8px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+  top: 11px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+  bottom: 11px;
+}
+
+/* Navbar Scroll Effect */
+.navbar.scrolled {
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+  color: white;
+  padding: 120px 0 100px;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/pattern.png");
+  opacity: 0.1;
+}
+
+.hero-section h1 {
+  margin-bottom: 20px;
+  font-weight: 800;
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+
+.hero-section p.lead {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.hero-section img {
+  border: 8px solid white;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.hero-section img:hover {
+  transform: scale(1.02);
+}
+
+.hero-btn {
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Cards de Veículos */
+.veiculos-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.veiculo-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 30px;
+}
+
+.veiculo-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-container {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.veiculo-card:hover .card-img-container img {
+  transform: scale(1.1);
+}
+
+.card-img-overlay {
+  top: auto;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 15px;
+}
+
+.card-img-overlay .badge {
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  border-radius: 50px;
+  background-color: var(--primary-color);
+}
+
+.veiculo-card .card-body {
+  padding: 20px;
+}
+
+.veiculo-card .card-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.veiculo-card .card-text {
+  margin-bottom: 15px;
+}
+
+.veiculo-card .text-primary {
+  color: var(--primary-color) !important;
+}
+
+.veiculo-card .btn {
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Filtro de Veículos */
+.filtro-container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 30px;
+}
+
+.filtro-container .form-select {
+  border-radius: 4px 0 0 4px;
+  border-color: #ced4da;
+}
+
+.filtro-container .btn {
+  border-radius: 0 4px 4px 0;
+}
+
+/* Sobre Nós */
+.about-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.about-section img {
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.about-section h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
+.about-section .lead {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* Depoimentos */
+.testimonials-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.testimonial-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s;
+  height: 100%;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.testimonial-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+}
+
+.testimonial-card .card-body {
+  padding: 25px;
+}
+
+.testimonial-card .card-text {
+  font-style: italic;
+  position: relative;
+  padding: 0 10px;
+}
+
+.testimonial-card .card-text::before,
+.testimonial-card .card-text::after {
+  content: '"';
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.testimonial-card .card-text::after {
+  content: '"';
+}
+
+/* Contato */
+.contact-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.contact-section h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
+.contact-section .lead {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.contact-form .form-control {
+  border-radius: 4px;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ced4da;
+}
+
+.contact-form .form-control:focus {
+  box-shadow: none;
+  border-color: var(--primary-color);
+}
+
+.contact-form .btn {
+  padding: 12px 30px;
+  font-weight: 600;
+}
+
+.contact-info {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  height: 100%;
+}
+
+.contact-info h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.contact-info ul li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.contact-info ul li i {
+  color: var(--primary-color);
+  margin-right: 15px;
+  font-size: 1.2rem;
+  margin-top: 3px;
+}
+
+.social-media h4 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  margin-right: 10px;
+  color: white;
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.map-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  height: 300px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 60px 0 20px;
+}
+
+footer h5 {
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links {
+  margin-bottom: 30px;
+}
+
+.footer-links li {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+.contact-info li {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.contact-info li i {
+  width: 20px;
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+footer hr {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 30px 0;
+}
+
+footer .copyright {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer .copyright a {
+  color: #fff;
+}
+
+/* Página de Detalhes do Veículo */
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.breadcrumb-item a {
+  color: var(--primary-color);
+}
+
+.breadcrumb-item.active {
+  color: var(--gray-color);
+}
+
+.vehicle-gallery {
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 30px;
+}
+
+.vehicle-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.price-tag {
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.price-tag h2 {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.vehicle-details .card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 30px;
+}
+
+.vehicle-details .card-header {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+  padding: 15px 20px;
+}
+
+.vehicle-details .list-group-item {
+  padding: 15px 20px;
+  border-color: #f1f1f1;
+}
+
+.vehicle-details .list-group-item i {
+  color: var(--primary-color);
+}
+
+.similar-vehicles h3 {
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+}
+
+/* Responsividade */
+@media (max-width: 1199.98px) {
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding: 100px 0 80px;
+    text-align: center;
+  }
+
+  .hero-section img {
+    margin-top: 40px;
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .about-section img {
+    margin-bottom: 30px;
+  }
+
+  .contact-info {
+    margin-top: 40px;
+  }
+
+  .vehicle-gallery {
+    height: 350px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p.lead {
+    font-size: 1.1rem;
+  }
+
+  .card-img-container {
+    height: 200px;
+  }
+
+  .vehicle-gallery {
+    height: 250px;
+  }
+
+  .contact-form {
+    margin-bottom: 40px;
+  }
+
+  footer [class^="col-"] {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-section {
+    padding: 80px 0 60px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .vehicle-gallery {
+    height: 200px;
+  }
+}
+

@@ -1,0 +1,106 @@
+body {
+  background-color: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px;
+  height: 100%;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.table-responsive {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+  background-color: #f1f1f1;
+}
+
+.btn-action {
+  margin-right: 5px;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card-header {
+  font-weight: bold;
+}
+
+.page-header {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 15px;
+}
+
+.alert {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.detail-label {
+  font-weight: bold;
+  color: #555;
+}
+
+.search-box {
+  margin-bottom: 20px;
+}
+
+.pagination {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.badge-status {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+}
+
+.vinculo-card {
+  border-left: 4px solid #007bff;
+}
+
+.cliente-info,
+.veiculo-info {
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.cliente-info {
+  background-color: #e7f5ff;
+  border-left: 4px solid #007bff;
+}
+
+.veiculo-info {
+  background-color: #e7f9ed;
+  border-left: 4px solid #28a745;
+}
+
